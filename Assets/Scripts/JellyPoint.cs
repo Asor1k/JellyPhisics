@@ -7,24 +7,11 @@ namespace JellyPhisics
     [RequireComponent(typeof(CircleCollider2D))]
     public class JellyPoint : MonoBehaviour
     {
-        private CircleCollider2D circleCollider;
-
-        private void OnDrawGizmos()
+        [ContextMenu("Face center")]
+        public void FaceCenter(Vector3 center)
         {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.position, GetComponent<CircleCollider2D>().radius);
+            //transform.LookAt(center);
         }
 
-        private void Awake()
-        {
-            circleCollider = GetComponent<CircleCollider2D>();
-        }
-
-
-
-        public CircleCollider2D GetCollider()
-        {
-            return circleCollider;
-        }
     }
 }

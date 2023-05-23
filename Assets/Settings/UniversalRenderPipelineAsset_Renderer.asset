@@ -73,4 +73,4 @@ MonoBehaviour:
     m_Bits: 1
   _blurMaterial: {fileID: 2100000, guid: 83cd7000f6233494489fec08f7feca7e, type: 2}
   _blitMaterial: {fileID: 2100000, guid: ff3c9e05e73633048a1c9027b0f3176c, type: 2}
-  _blurPasses: 3
+  _blurPasses: 7
