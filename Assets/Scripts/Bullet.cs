@@ -16,7 +16,6 @@ namespace JellyPhisics
         {
             yield return new WaitForEndOfFrame();
             Destroy(gameObject);
-
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -27,14 +26,10 @@ namespace JellyPhisics
             }
         }
 
-        public void Start()
+        public void Init()
         {
             rb.AddForce(Vector2.up * speed);
         }
 
-        private void FixedUpdate()
-        {
-            //rb.position += Vector2.up * speed * Time.fixedDeltaTime;            
-        }
     }
 }

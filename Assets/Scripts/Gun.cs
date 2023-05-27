@@ -9,7 +9,7 @@ namespace JellyPhisics
         [SerializeField]
         private float movementSpeed;
         [SerializeField]
-        private float recoilSpeed;
+        private float bulletsPerSecond;
         [SerializeField]
         private Bullet bulletPrefab;
         [SerializeField]
@@ -31,6 +31,7 @@ namespace JellyPhisics
         {
             lastShotTime = Time.time;
             Bullet bullet = Instantiate(bulletPrefab, bulletPoint.position, Quaternion.identity);
+            bullet.Init();
         }
 
         private void Update()
@@ -38,7 +39,7 @@ namespace JellyPhisics
             if (Input.GetMouseButton(0))
             {
                 MoveToMouse();
-                if(Time.time - lastShotTime > 1 / recoilSpeed)
+                if(Time.time - lastShotTime > 1 / bulletsPerSecond)
                 {
                     Shoot();
                 }
